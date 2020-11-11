@@ -13,6 +13,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveForward();
+        void MoveForward()
+        {
+            // 10m / sec speed
+            transform.Translate(Vector3.forward * Time.deltaTime * 10); 
+        }
+        
+        // MoveBackwards();
+        void MoveBackwards()
+        {
+            transform.Translate(Vector3.back); 
+        }
         
     }
 }

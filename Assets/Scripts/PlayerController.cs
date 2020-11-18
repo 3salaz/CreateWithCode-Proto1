@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // access mofifier like (public) -- private means can only be used within this class  "playerConteroller"
+    public float speed = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class PlayerController : MonoBehaviour
         void MoveForward()
         {
             // 10m / sec speed
-            transform.Translate(Vector3.forward * Time.deltaTime * 10); 
+            transform.Translate(Vector3.forward * Time.deltaTime * speed); 
         }
         
         // MoveBackwards();
